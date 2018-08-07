@@ -614,3 +614,25 @@ foreach($tab as $valeur) { // le mot clé "as" fait partie de la structure du fo
 foreach($tab as $indice => $valeur) { // Quand il y a 2 variables après "as", la première parcourt toujours les INDICES, et la seconde parcourt toujours les VALEURS
     echo $indice . ' correspond à ' . $valeur . '<br>';
 }
+
+
+// Exercice : 
+/* - écrivez un array avec les indices prenom, nom, email et telephone et mettez y pour valeurs des informations fictives. Remarque : cet array ne concerne qu'une seule personne.
+    
+    - Puis avec une boucle foreach, affichez les valeurs de votre array dans des <p>, sauf le prenom qui doit être affiché dans un <h3>.
+*/
+
+$identifiant = array(
+    'prenom' => 'Paul',
+    'nom' => 'Dupond',
+    'email' => 'p.dupond@email.com',
+    'telephone' => '01 42 32 21 03'
+);
+
+foreach($identifiant as $indices => $identite) {
+    if ($indices == 'prenom') {
+        echo '<h3>' . $identite . '</h3>';
+    } else {
+        echo '<p>' . $identite . '</p>';
+    }
+}
