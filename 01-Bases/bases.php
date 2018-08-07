@@ -606,6 +606,11 @@ echo '<h2> La boucle foreach pour les arrays </h2>';
 //----------------------------
 // foreach est un moyen simple de passer en revue un tableau. Elle fonctionne uniquement sur les tableaux et les objets.
 
-foreach($tab as $valeur) {
+foreach($tab as $valeur) { // le mot clé "as" fait partie de la structure du foreach et est obligatoire. La variable $valeur (que l'on nomme comme on veut) vient parcourir les valeurs du tableau $tab. Quand il ya qu'une seule variable après "as", elle parcourt systématiquement les VALEURS 
+    echo $valeur . '<br>';  // on affiche successivement à chaque tour de boucle les éléments du tableau
+}
 
+// Parcourir la colonne des indices ET la colonne des valeurs :
+foreach($tab as $indice => $valeur) { // Quand il y a 2 variables après "as", la première parcourt toujours les INDICES, et la seconde parcourt toujours les VALEURS
+    echo $indice . ' correspond à ' . $valeur . '<br>';
 }
