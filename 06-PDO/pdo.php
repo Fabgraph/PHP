@@ -98,3 +98,5 @@ $result = $pdo->query("SELECT * FROM employes WHERE prenom = 'daniel'");
 $employe = $result->fetch(PDO::FETCH_OBJ);  // transforme en un objet avec les noms des champs de la table comme propriétés de cet objet 
 debug($employe);
 echo $employe->prenom . '<br>';
+
+// Attention : après une requête il faut choisir l'un des fetch(). Si l'on veut en refaire un, il faut refaire la requête : en effet, on ne peut pas effectuer plusieurs transformation successives sur le même objet $result.
